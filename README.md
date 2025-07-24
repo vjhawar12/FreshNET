@@ -10,7 +10,7 @@ The model was trained on a custom dataset of ~40,000 high-resolution images and 
 
 ## 🎯 Motivation
 
-This project is part of a broader system called **D.E.L.P.H.I** (see companion repo), aimed at deploying efficient computer vision models in food supply chains. I needed a classifier that was:
+This project is part of a broader system called **D.E.L.P.H.I** (see companion repo), an assistive device that employs computer vision (CV) for object detection. One of its features (on the master brach -- not merged with main yet) is freshness detection for fruits and vegetables. I needed a classifier that was:
 
 - 🧠 Compact enough for mobile hardware
 - 🎯 Accurate enough to detect subtle signs of spoilage
