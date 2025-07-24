@@ -1,4 +1,4 @@
-# 🍓 FreshNET: Lightweight CNN for Fruit Freshness Classification
+# 🍓 FreshNET: Lightweight CNN for Fruit/Vegetable Freshness Classification
 
 ## 🧠 Overview
 
