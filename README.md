@@ -21,20 +21,13 @@ After exploring standard CNNs, I studied MobileNet and adapted its concepts into
 
 ## 📊 Current Results & Next Steps
 
-FreshNET trains stably in early epochs and shows strong validation accuracy initially. However, training becomes unstable once the learning rate exceeds approximately `0.003`. This appears to stem from sensitivity in the scheduler and optimizer settings.
+**Model Size after quantization: 2.75 MB**
 
-### 🔍 Key observations:
-- `RMSProp` shows instability at higher learning rates
-- Training loss diverges when using `LinearWarmupCosineAnnealingLR` past a certain point
-- Deeper convolution blocks may be contributing to overfitting
+I'm looking into reducing the size even further down to ~1 MB to see just how lean the model can get while being highly accurate. I'm planning on reducing the number of Depthwise Seperable Convolution blocks down from 7 to 5, and update the channel size, expansion factor etc., accordingly in order to prune the model. 
 
-### 🛠️ Ongoing improvements:
-- Switching to **AdamW** for more stable optimization
-- Adding **gradient clipping** and capping the max learning rate
-- Simplifying the model by trimming deeper convolutional blocks
-- Introducing **Batch Normalization** earlier to stabilize activations
+**Accuracy: 96.3 %**
 
-The core architecture is complete. My current focus is on **hyperparameter tuning** and **training stability**.
+This model has perfomed at 96.3% on validation set, but since this is part of an assistive device with direct consequences on the well-being of the user, I'm aiming for 98% at least. To do so, I'm looking into inreasing data augmentation slightly and tuning the learning rate scheduler a bit more.  
 
 ---
 
