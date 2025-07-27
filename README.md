@@ -28,6 +28,7 @@ This model has perfomed at 96.3% on validation set, but since this is part of an
 
 
 **Expected Model Size after quantization: 2.75 MB**
+
 **Model size (current) without quantization: 11 MB**
 
 At the moment, the model is not yet quantized due to challenges in aligning the correct versions of PyTorch, TorchVision, and ExecuTorch required for Quantization-Aware Training (QAT) in Export Quantization mode.
