@@ -29,7 +29,7 @@ This model has perfomed at 96.3% on validation set, but since this is part of an
 
 **Expected Model Size after quantization: 2.75 MB**
 
-Currently, the model is not quantized because I'm struggling with getting the right dependencies for each of the various models in order to apply Quantization Aware Training in Export Quantization Mode. I expect the model to go from 11 MB to 2.75 MB after quantization since models tend to reduce by ~75% in size after quantization. After I'm able to export and deploy the quantized model on the Pi, I'm going to measure latency and deceide if removing some of the latter layers would be beneficial to lean down the model. I might reduce the number of Depthwise Seperable Convolution blocks down from 7 to 5, and update the channel size, expansion factor etc., accordingly in order to prune the model. 
+Currently, the model is not quantized because I'm struggling with getting the right dependencies for each of the various modules in order to apply Quantization Aware Training in Export Quantization Mode. I expect the model to go from 11 MB to 2.75 MB after quantization since models tend to reduce by ~75% in size after quantization. After I'm able to export and deploy the quantized model on the Pi, I'm going to measure latency and deceide if removing some of the latter layers would be beneficial to lean down the model. I might reduce the number of Depthwise Seperable Convolution blocks down from 7 to 5, and update the channel size, expansion factor etc., accordingly in order to prune the model. 
 
 ---
 
