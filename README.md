@@ -21,13 +21,15 @@ After exploring standard CNNs, I studied MobileNet and adapted its concepts into
 
 ## 📊 Current Results & Next Steps
 
-**Model Size after quantization: 2.75 MB**
-
-I'm looking into reducing the size even further down to ~1 MB to see just how lean the model can get while being highly accurate. I'm planning on reducing the number of Depthwise Seperable Convolution blocks down from 7 to 5, and update the channel size, expansion factor etc., accordingly in order to prune the model. 
 
 **Accuracy: 96.3 %**
 
 This model has perfomed at 96.3% on validation set, but since this is part of an assistive device with direct consequences on the well-being of the user, I'm aiming for 98% at least. To do so, I'm looking into inreasing data augmentation slightly and tuning the learning rate scheduler a bit more.  
+
+
+**Expected Model Size after quantization: 2.75 MB**
+
+Currently, the model is not quantized because I'm struggling with getting the right dependencies for each of the various models in order to apply Quantization Aware Training in Export Quantization Mode. I expect the model to go from 11 MB to 2.75 MB after quantization since models tend to reduce by ~75% in size after quantization. After I'm able to export and deploy the quantized model on the Pi, I'm going to measure latency and deceide if removing some of the latter layers would be beneficial to lean down the model. I might reduce the number of Depthwise Seperable Convolution blocks down from 7 to 5, and update the channel size, expansion factor etc., accordingly in order to prune the model. 
 
 ---
 
