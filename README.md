@@ -25,7 +25,7 @@ After exploring standard CNNs, I studied MobileNet and adapted its concepts into
 |-------------------------|------------------------|------------------------------|
 | Accuracy (Test)         | 97.8%                  | TBD                          |
 | Model Size              | 11.11 MB               | **0.24 MB**                  |
-| Size Reduction          | —                      | ~22× smaller                 |
+| Size Reduction          | —                      | ~46× smaller                 |
 | Quantization Type       | —                      | QAT (Quantization-Aware Training) |
 | Device Compatibility    | General (CPU/GPU)      | Mobile / Edge (ARM, etc.)   |
 
