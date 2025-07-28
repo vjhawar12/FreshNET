@@ -27,7 +27,7 @@ After exploring standard CNNs, I studied MobileNet and adapted its concepts into
 | Model Size              | 11.11 MB               | **0.24 MB**                  |
 | Size Reduction          | —                      | ~46× smaller                 |
 | Quantization Type       | —                      | QAT (Quantization-Aware Training) |
-| Device Compatibility    | General (CPU/GPU)      | Mobile / Edge (ARM, etc.)   |
+| Target Architecture     | x86_64                 | ARM                          |
 
 ---
 
