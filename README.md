@@ -19,21 +19,15 @@ After exploring standard CNNs, I studied MobileNet and adapted its concepts into
 
 ---
 
-## 📊 Current Results & Next Steps
+### 📊 FreshNET Model Comparison (Original vs Quantized)
 
-
-**Accuracy: 96.3 %**
-
-This model has perfomed at 96.3% on validation set, but since this is part of an assistive device with direct consequences on the well-being of the user, I'm aiming for 98% at least. To do so, I'm looking into inreasing data augmentation slightly and tuning the learning rate scheduler a bit more.  
-
-
-**Expected Model Size after quantization: 2.75 MB**
-
-**Model size (current) without quantization: 11 MB**
-
-At the moment, the model is not yet quantized due to challenges in aligning the correct versions of PyTorch, TorchVision, and ExecuTorch required for Quantization-Aware Training (QAT) in Export Quantization mode.
-
-However, I expect the model to go from 11 MB to 2.75 MB after quantization since models tend to reduce by ~75% in size after quantization. After I'm able to export and deploy the quantized model on the Pi, I'm going to measure latency and deceide if removing some of the latter layers would be beneficial to lean down the model. I might reduce the number of Depthwise Seperable Convolution blocks down from 7 to 5, and update the channel size, expansion factor etc., accordingly in order to prune the model. 
+| Metric                  | Original Model (FP32) | Quantized Model (INT8, QAT) |
+|-------------------------|------------------------|------------------------------|
+| Accuracy (Test)         | 97.8%                  | TBD                          |
+| Model Size              | 11 MB                  | **0.2 MB**                   |
+| Size Reduction          | —                      | ~55× smaller                 |
+| Quantization Type       | —                      | QAT (Quantization-Aware Training) |
+| Device Compatibility    | General (CPU/GPU)      | Mobile / Edge (ARM, etc.)   |
 
 ---
 
