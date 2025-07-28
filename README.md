@@ -24,7 +24,7 @@ After exploring standard CNNs, I studied MobileNet and adapted its concepts into
 | Metric                  | Original Model (FP32) | Quantized Model (INT8, QAT) |
 |-------------------------|------------------------|------------------------------|
 | Accuracy (Test)         | 97.8%                  | TBD                          |
-| Model Size              | 11 MB                  | **0.2 MB**                   |
+| Model Size              | 11.11 MB               | **0.24 MB**                  |
 | Size Reduction          | —                      | ~55× smaller                 |
 | Quantization Type       | —                      | QAT (Quantization-Aware Training) |
 | Device Compatibility    | General (CPU/GPU)      | Mobile / Edge (ARM, etc.)   |
