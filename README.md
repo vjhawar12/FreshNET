@@ -6,7 +6,7 @@
 
 The model was trained on a custom dataset of ~40,000 high-resolution images and is designed to be deployable on **edge devices**.
 
-Download the model weights from here: https://huggingface.co/vjhawar12/FreshNET/resolve/main/FreshNET.pth
+Download the **unquantized model weights** from here: https://huggingface.co/vjhawar12/FreshNET/resolve/main/FreshNET.pth
 
 ---
 
