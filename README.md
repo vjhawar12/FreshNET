@@ -4,7 +4,9 @@
 
 **FreshNET** is a custom convolutional neural network inspired by the architectural principles of MobileNet, as introduced in the paper _“MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications”_ by Howard et al. It uses **Depthwise Separable Convolutions** and **skip connections** to achieve a lightweight yet expressive architecture, tailored for fine-grained classification of fresh vs. rotten fruits and vegetables.
 
-The model was trained on a custom dataset of ~40,000 high-resolution images and is designed to be deployable on **edge devices**.
+The model was trained on a custom dataset of ~40,000 high-resolution images and is designed to be deployable on **edge devices**. 
+
+I am currently working on quantizing the model with QAT. I'm trying to resolve the following error: "Input type (struct c10::quint8) and bias type (float) should be the same". I believe this is due to the model receiving a QUINT8 data type when it expects a Float32 because of an incomplete conversion. Once it's resolved, I will be able to run the test loop and report the final test accuracy of the quantized model. 
 
 Download the **unquantized model weights** from here: https://huggingface.co/vjhawar12/FreshNET/resolve/main/FreshNET.pth
 
