@@ -14,10 +14,7 @@ Download the **unquantized model weights** from here: https://huggingface.co/vjh
 
 ## 🎯 Motivation
 
-This project is part of a broader system called **D.E.L.P.H.I** (see companion repo), an assistive device that employs computer vision (CV) for object detection. One of its features (on the master brach -- not merged with main yet) is freshness detection for fruits and vegetables. I needed a classifier that was:
-
-- 🧠 Compact enough for mobile hardware
-- 🎯 Accurate enough to detect subtle signs of spoilage
+After completing my project **D.E.L.P.H.I** (see companion repo), an assistive device that employs computer vision (CV) for object detection, I was curious to see how deep learning models could be optimized for deployment on edge devices. I read the pytorch docs on Quantization and wanted to explore the topic further, so I deceided to work on a classifier that balanced **accuracy** with **model size**. 
 
 After exploring standard CNNs, I studied MobileNet and adapted its concepts into **FreshNET**, modifying the architecture to better suit the task of **freshness detection** in fruits and vegetables.
 
