@@ -6,7 +6,7 @@
 
 The model was trained on a custom dataset of ~40,000 high-resolution images and is designed to be deployable on **edge devices**. 
 
-I am currently working on quantizing the model with QAT. I'm trying to resolve the following error: "Input type (struct c10::quint8) and bias type (float) should be the same". I believe this is due to the model receiving a QUINT8 data type when it expects a Float32 because of an incomplete conversion. Once it's resolved, I will be able to run the test loop and report the final test accuracy of the quantized model. 
+I am currently quantizing the model with QAT. One of the DepthwiseSeparableConvolution layers appears to be receiving a float32 input when it expects a quint8. I’m working to resolve this type mismatch, after which I will run the test loop and report the final accuracy of the quantized model.
 
 Download the **unquantized model weights** from here: https://huggingface.co/vjhawar12/FreshNET/resolve/main/FreshNET.pth
 
@@ -46,10 +46,6 @@ After exploring standard CNNs, I studied MobileNet and adapted its concepts into
 
 ---
 
-## 📁 Related Projects
-
-- 🔗 [D.E.L.P.H.I Project (Companion Repo)](https://github.com/vjhawar12/D.E.L.P.H.I.) – An assistive technology system utilizing CV.
-
 ## 🧩 Next Experiments
 
 - Try pretrained MobileNetV2 as a benchmark
@@ -57,6 +53,3 @@ After exploring standard CNNs, I studied MobileNet and adapted its concepts into
 - Evaluate inference latency on Raspberry Pi / Jetson Nano
 
 ---
-
-> _“This project helped me deeply understand efficient CNN architectures, training stability issues, and the design tradeoffs between model size, accuracy, and optimization. The next phase is about taking this working core and refining it for deployment and robustness.”_
-
